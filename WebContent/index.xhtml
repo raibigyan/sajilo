@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   template="/WEB-INF/templates/login.xhtml">
+   <ui:define name="content">
+      <h2>PLEASE LOGIN:</h2>
+       <h:form id="reg">
+         
+         <table>
+         
+            <tr>
+               <th style="text-align: right;"><h:outputLabel
+                     for="name" value="Name:" /></th>
+               <td>	<h:inputText value="#{friend.name}" title="name" id="name" required="true"/>
+	             <h:message  for="name" style="color:red"/>
+              </td>
+            </tr>
+            <tr>
+               <th style="text-align: right;"><h:outputLabel
+                     for="password" value="Password:" /></th>
+               <td><h:inputSecret value="#{friend.password}" title="password" id="password" required="true"/>
+	           <h:message for="password" style="color:red" /> 
+	           </td>
+            </tr>
+            
+         </table>
+         <p>
+            <h:commandButton action="show"
+               actionListener="#{sajiloBean.create}" value="SignIn" />
+            
+         </p>
+      </h:form>
+      
+       
+    </ui:define>
+</ui:composition>

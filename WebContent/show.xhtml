@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   template="/WEB-INF/templates/default.xhtml">
+   <ui:define name="content">
+   <p>
+         <h:link outcome="/index.xhtml"><strong>SignOut</strong></h:link>
+   </p>
+      <h1><strong>YOU LOGIN AS:</strong></h1>
+       <h:form id="reg">
+         
+         <h:dataTable var="sb" value="#{sajiloBean.list}">
+        
+         <h:column>
+            <f:facet name="header">Name</f:facet>
+                #{sb.name}
+            </h:column>
+         <h:column>
+            <f:facet name="header">Password</f:facet>
+                #{sb.password}
+            </h:column>
+         
+      </h:dataTable>     
+      </h:form>
+      
+       
+    </ui:define>
+</ui:composition>
