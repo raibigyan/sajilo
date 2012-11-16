@@ -1,0 +1,15 @@
+J2EE APPLICATION:
+________________
+
+I am using JbossStudio and EAP6.0 with JSF,EJB,JPA and MYSQL to developed this j2ee application.
+
+Steps to create project:
+_______________________
+# Create Dynamic web project.
+# Create table to store data back end and connect with database.
+# Create persistence.xml using JPA and edit standalone.xml.
+# Create Entity class.
+# Create EJB bean to handle business logic.
+# Create JSF to handle front end.
+
+Note: Create one empty beans.xml file under WEB-INF directory.
